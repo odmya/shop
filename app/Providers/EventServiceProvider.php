@@ -16,6 +16,13 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
+        'App\Events\OrderPaid' => [
+            'App\Listeners\UpdateProductSoldCount',
+        ],
+        'App\Events\OrderConfirmationEvent' => [
+            'App\Listeners\OrderConfirmationListener',
+
+        ],
         'App\Events\LiyupingEvent' => [
             'App\Listeners\LiyupingListener',
         ],
