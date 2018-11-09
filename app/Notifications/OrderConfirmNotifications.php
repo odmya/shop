@@ -26,7 +26,7 @@ class OrderConfirmNotifications extends Notification implements ShouldQueue
     {
         return (new MailMessage)
                     ->line('order confirmation. voice:'.$notifiable->no)
-                    ->line('license', $notifiable->extra)
+                    ->line('license:'. $notifiable->extra)
                     ->line('Thank you for shopping with us!');
     }
 
