@@ -145,7 +145,7 @@ class PaymentController extends Controller
         $order->extra= $license;
         $order->save();
 
-        return view('payment.success',['license' => $license]，'orderno'=>$checkoutdata['invoice_id']);
+        return view('payment.success',['license' => $license], 'orderno'=>$checkoutdata['invoice_id']);
       }
 
 
