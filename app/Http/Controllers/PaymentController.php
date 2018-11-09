@@ -141,7 +141,7 @@ class PaymentController extends Controller
 
         exec("python /var/www/html/SNGenerate.py ".trim($email),$license);
 
-        $order = Order::where('no',$checkoutdata['invoice_id']);
+        $order = Order::where('no',$checkoutdata['invoice_id'])->first();
         $order->extra= $license;
         $order->save();
 
