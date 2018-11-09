@@ -134,16 +134,23 @@ class PaymentController extends Controller
 
         });
 
+        $request->session()->forget('checkoutdata');
+        $request->session()->forget('email');
+        $request->session()->forget('remark');
+        \ShoppingCart::clean();
 
+        exec("python SNGenerate.py ".trim($email),$license);
 
+        $order = Order::where('no',$checkoutdata['invoice_id']);
+        $order->extra= $license;
+        $order->save();
+
+        return view('payment.success',['license' => $license]，'orderno'=>$checkoutdata['invoice_id']);
       }
-      $request->session()->forget('checkoutdata');
-      $request->session()->forget('email');
-      $request->session()->forget('remark');
-      \ShoppingCart::clean();
 
-      var_dump($response);
-      echo "ok....";
+
+      return view('payment.error',['payment_error'=>$payment_error]);
+
 
     }
 
