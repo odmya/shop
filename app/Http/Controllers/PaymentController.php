@@ -139,7 +139,9 @@ class PaymentController extends Controller
         $request->session()->forget('remark');
         \ShoppingCart::clean();
 
-        exec("python /var/www/html/SNGenerate.py ".trim($email),$license);
+        exec("python /var/www/html/SNGenerate.py ".trim($email),$output);
+
+        $license = $output[0];
 
         $order = Order::where('no',$checkoutdata['invoice_id'])->first();
         $order->extra= $license;
