@@ -57,8 +57,10 @@ class ProductsController extends Controller
   }
 
 
-  public function show(Product $product, Request $request)
+  public function show($slug, Request $request)
     {
+        $product =Product::where('slug',$slug)->first();
+
         if (!$product->on_sale) {
             throw new InvalidRequestException('商品未上架');
         }
@@ -70,7 +72,6 @@ class ProductsController extends Controller
             // boolval() 函数用于把值转为布尔值
             $favored = boolval($user->favoriteProducts()->find($product->id));
         }
-
         return view('products.show', ['product' => $product, 'favored' => $favored]);
     }
 

@@ -167,6 +167,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
 
+
         /*
          * Package Service Providers...
          */
@@ -181,6 +182,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Overtrue\LaravelShoppingCart\ServiceProvider::class,
         Srmklive\PayPal\Providers\PayPalServiceProvider::class,
+        Harimayco\Menu\MenuServiceProvider::class,
 
     ],
 
@@ -232,6 +234,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'ShoppingCart'  => Overtrue\LaravelShoppingCart\Facade::class,
         'PayPal' => Srmklive\PayPal\Facades\PayPal::class,
+        'Menu' => Harimayco\Menu\Facades\Menu::class,
 
     ],
 

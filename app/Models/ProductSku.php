@@ -5,10 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Exceptions\InternalException;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class ProductSku extends Model
 {
-  protected $fillable = ['title', 'description', 'price', 'stock'];
+  use Sluggable;
+  protected $fillable = ['title','slug', 'description', 'price', 'stock'];
 
    public function product()
    {
@@ -31,5 +33,20 @@ class ProductSku extends Model
         }
         $this->increment('stock', $amount);
     }
-    
+
+    /**
+     * Return the sluggable configuration array for this model.
+     *
+     * @return array
+     */
+    public function sluggable()
+    {
+
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
+    }
+
 }

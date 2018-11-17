@@ -5,10 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
+use Cviebrock\EloquentSluggable\Sluggable;
+
 class Product extends Model
 {
+  use Sluggable;
   protected $fillable = [
-                  'title','seo_title','seo_keyword','seo_description', 'description', 'image', 'on_sale','rating', 'sold_count', 'review_count', 'price'
+                  'title','slug','seo_title','seo_keyword','seo_description', 'description', 'image', 'on_sale','rating', 'sold_count', 'review_count', 'price'
   ];
   protected $casts = [
       'on_sale' => 'boolean', // on_sale 是一个布尔类型的字段
@@ -27,5 +30,21 @@ class Product extends Model
        }
        return \Storage::disk('public')->url($this->attributes['image']);
    }
+
+   /**
+    * Return the sluggable configuration array for this model.
+    *
+    * @return array
+    */
+   public function sluggable()
+   {
+
+       return [
+           'slug' => [
+               'source' => 'title'
+           ]
+       ];
+   }
+
 
 }
