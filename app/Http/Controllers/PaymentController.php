@@ -57,9 +57,7 @@ class PaymentController extends Controller
     public function paypalsuccess(Request $request)
     {
 
-      $license = exec("python /var/www/html/SNGenerate.py 149748384@qq.com");
 
-      dd($license);
 
       $token = $request->input("token");
       $PayerID = $request->input("PayerID");
@@ -145,10 +143,7 @@ class PaymentController extends Controller
 
         //exec("python /var/www/html/SNGenerate.py ".trim($email),$output);
         //$license = $output[0];
-        $license = exec("python /var/www/html/SNGenerate.py ".trim($email));
-
-        dd($license);
-
+        $license = exec("python /var/www/html/SNGenerate.py ".trim($email),$output);
 
         $order = Order::where('no',$checkoutdata['invoice_id'])->first();
         $order->extra= $license;
