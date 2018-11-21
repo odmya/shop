@@ -21,5 +21,18 @@ class UserGuide extends Model
           ]
       ];
   }
-  
+
+  public function previtem()
+  {
+      return $this->belongsTo(self::class, "prev_item");
+  }
+
+
+  public function nextitem()
+  {
+      return $this->belongsTo(self::class, "next_item");
+  }
+
+
+
 }

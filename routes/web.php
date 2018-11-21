@@ -75,6 +75,11 @@ Route::group(['middleware' => 'web'], function () {
 Route::post('cart', 'CartController@add')->name('cart.add');
 Route::get('cart', 'CartController@index')->name('cart.index');
 
+Route::get('guide', 'UserGuideController@index')->name('guide.index'); //user guide
+Route::get('guide/{slug}.html', 'UserGuideController@show')->name('guide.show'); //user guide
+
+
+
 
 Route::get('alipay', function() {
     return app('alipay')->web([

@@ -37,7 +37,7 @@
                 <li><a href="#">One more separated link</a></li>
               </ul>
               </li>
-              <li><a href="#">Tips & Tricks</a></li>
+              <li><a href="{{route('guide.index')}}">User Guide</a></li>
 
               <li><a href="#">Try</a></li>
               <li><a href="#">Buy</a></li>

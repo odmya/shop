@@ -14,4 +14,8 @@ class MenuItem extends Model
   {
       return $this->belongsTo(Menu::class);
   }
+
+  public function hasChildren(){
+    return $this->hasMany(self::class, "parent");
+  }
 }
