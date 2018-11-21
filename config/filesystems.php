@@ -70,6 +70,12 @@ return [
             'region' => env('AWS_DEFAULT_REGION'),
             'bucket' => env('AWS_BUCKET'),
         ],
+        'admin_desc' => [
+              'driver' => 'local',
+              'root' => public_path('uploads/'),
+              'url' => '/upload/admin/',
+              'visibility' => 'public',
+        ],
 
     ],
 

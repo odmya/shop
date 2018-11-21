@@ -137,7 +137,8 @@ class UserGuideController extends Controller
         $form->text('title', 'Title');
         //$form->text('slug', 'Slug');
 
-        $form->editor('description', 'Description');
+        $form->ckeditor('description', 'Description');
+        //$form->editor_new_ck('description', 'Description');
         $form->text('seo_title', 'Seo title');
         $form->text('seo_keyword', 'Seo keyword');
         $form->text('seo_description', 'Seo description');

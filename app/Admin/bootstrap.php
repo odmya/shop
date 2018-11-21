@@ -20,4 +20,13 @@
 
 //Encore\Admin\Form::forget(['map', 'editor']);
 
+use Encore\Admin\Form;
+
+
 Encore\Admin\Form::forget(['map']);
+
+//Form::extend('editor_new_ck', \App\Admin\Extensions\Form\CKEditor::class);
+
+Form::forget('editor');
+
+Form::extend('ckeditor', CKEditor::class);

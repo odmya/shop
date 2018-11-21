@@ -68,7 +68,7 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::post('ipn/notify','PayPalController@postNotify');
 
-
+    Route::post('/admin/upload','UploadController@index');
 
 });
 

@@ -254,5 +254,15 @@ return [
     */
     'extensions' => [
 
+        'ckeditor' => [
+
+            //Set to false if you want to disable this extension
+            'enable' => true,
+
+            // Editor configuration
+            'config' => [
+
+            ]
+        ]
     ],
 ];
