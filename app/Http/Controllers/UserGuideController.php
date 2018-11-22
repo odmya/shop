@@ -11,7 +11,7 @@ class UserGuideController extends Controller
 {
     public function index(Request $request){
 
-      $menuList = Menu::where('name','User Guide')->first();
+      $menuList = Menu::whereName('User Guide')->first();
       $menu_user_guide = $menuList->menu_item->where('parent',0);
       $guideitem = UserGuide::find(UserGuide::min('id'));
 
@@ -22,9 +22,9 @@ class UserGuideController extends Controller
 
     public function show($slug){
 
-      $menuList = Menu::where('name','User Guide')->first();
+      $menuList = Menu::whereName('User Guide')->first();
       $menu_user_guide = $menuList->menu_item->where('parent',0);
-      $guideitem = UserGuide::where('slug',$slug)->first();
+      $guideitem = UserGuide::whereSlug($slug)->first();
 
 
       return view('guide.show', ['guideitem' => $guideitem,'menu_user_guide' => $menu_user_guide]);
