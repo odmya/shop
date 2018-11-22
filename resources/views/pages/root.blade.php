@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', '首页')
+@section('title', '[OFFICIAL] Home')
 
 @section('content')
 <div class="container-fluid home_section_a">

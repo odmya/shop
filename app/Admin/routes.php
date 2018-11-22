@@ -17,4 +17,7 @@ Route::group([
     $router->resource('userguides', UserGuideController::class);
     $router->resource('menus', MenuController::class);
     $router->resource('menuitems', MenuItemController::class);
+    $router->resource('informations', InformationController::class);
+    $router->resource('tips', TipsController::class);
+    $router->resource('tipcategories', TipCategoriesController::class);
 });
