@@ -20,4 +20,5 @@ Route::group([
     $router->resource('informations', InformationController::class);
     $router->resource('tips', TipsController::class);
     $router->resource('tipcategories', TipCategoriesController::class);
+    $router->resource('contactus', ContactUsController::class);
 });

@@ -34,3 +34,7 @@
 [2018-11-17 23:57:28] Processed:  App\Listeners\OrderConfirmationListener
 [2018-11-17 23:57:28] Processing: App\Notifications\OrderConfirmNotifications
 [2018-11-17 23:57:33] Processed:  App\Notifications\OrderConfirmNotifications
+[2018-11-24 01:31:02] Processing: App\Mail\ContactUs
+[2018-11-24 01:31:14] Processed:  App\Mail\ContactUs
+[2018-11-24 01:49:22] Processing: App\Mail\ContactUs
+[2018-11-24 01:49:30] Processed:  App\Mail\ContactUs

@@ -75,10 +75,13 @@ Route::group(['middleware' => 'web'], function () {
 Route::post('cart', 'CartController@add')->name('cart.add');
 Route::get('cart', 'CartController@index')->name('cart.index');
 
-Route::get('{slug}.html', 'InformationController@show')->name('guide.show'); //information
+Route::get('{slug}.html', 'InformationController@show')->name('information.show'); //information
 
 Route::get('guide', 'UserGuideController@index')->name('guide.index'); //user guide
 Route::get('guide/{slug}.html', 'UserGuideController@show')->name('guide.show'); //user guide
+
+Route::get('contact_us', 'ContactUsController@index')->name('contact.index'); //contact us
+Route::post('contact_us', 'ContactUsController@send')->name('contact.send'); //contact us
 
 
 
