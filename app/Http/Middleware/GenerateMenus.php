@@ -16,11 +16,36 @@ class GenerateMenus
      */
      public function handle($request, Closure $next)
      {
+
+
          \Menu::make('TopNavBar', function ($menu) {
-             $menu->add('Home');
-             $menu->add('About', 'about');
-             $menu->add('Services', 'services');
-             $menu->add('Contact', 'contact');
+           $topnav = Menu::whereName('topNav')->first();
+           $menu_topnav = $topnav->menu_item->where('parent',0);
+           foreach($menu_topnav as $topnav){
+             $menu->add($topnav->label,$topnav->link)->nickname(str_replace(" ","_",strtolower($topnav->label)));
+             if($topnav->hasChildren()){
+               foreach($topnav->hasChildren as $sub_menu_nav){
+                 $menu->get(str_replace(" ","_",strtolower($topnav->label)))->add($sub_menu_nav->label,$sub_menu_nav->link);
+               }
+             }
+           }
+
+
+         });
+
+         \Menu::make('footerNav', function ($menu) {
+           $topnav = Menu::whereName('footerNav')->first();
+           $menu_topnav = $topnav->menu_item->where('parent',0);
+           foreach($menu_topnav as $topnav){
+             $menu->add($topnav->label,$topnav->link)->nickname(str_replace(" ","_",strtolower($topnav->label)));
+             if($topnav->hasChildren()){
+               foreach($topnav->hasChildren as $sub_menu_nav){
+                 $menu->get(str_replace(" ","_",strtolower($topnav->label)))->add($sub_menu_nav->label,$sub_menu_nav->link);
+               }
+             }
+           }
+
+
          });
 
 
