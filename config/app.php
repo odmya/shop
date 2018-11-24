@@ -183,6 +183,8 @@ return [
         Overtrue\LaravelShoppingCart\ServiceProvider::class,
         Srmklive\PayPal\Providers\PayPalServiceProvider::class,
         Harimayco\Menu\MenuServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        
 
     ],
 

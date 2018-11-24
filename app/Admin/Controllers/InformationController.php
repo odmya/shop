@@ -83,7 +83,14 @@ class InformationController extends Controller
 
         $grid->id('Id');
         $grid->title('Title');
-        $grid->slug('Slug');
+        $grid->slug('Slug')->display(function ($slug) {
+              if($slug){
+                return route('information.show',$slug);
+              }else{
+                return "";
+              }
+
+            });
         $grid->description('Description');
         $grid->seo_title('Seo title');
         $grid->seo_keyword('Seo keyword');

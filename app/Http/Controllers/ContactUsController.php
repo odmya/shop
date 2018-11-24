@@ -36,4 +36,5 @@ class ContactUsController extends Controller
       return view('contact_us.send');
     }
 
+
 }

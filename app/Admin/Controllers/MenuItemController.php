@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Models\MenuItem;
+use App\Models\Menu;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
@@ -84,11 +85,25 @@ class MenuItemController extends Controller
         $grid->id('Id');
         $grid->label('Label');
         $grid->link('Link');
-        $grid->parent('Parent');
+        $grid->parent('Parent')->display(function ($parent) {
+              if($parent){
+                return MenuItem::find($parent)->label;
+              }else{
+                return "";
+              }
+
+            });
         $grid->sort('Sort');
         $grid->class('Class');
         $grid->icon('Icon');
-        $grid->menu_id('Menu id');
+        $grid->menu_id('Menu')->display(function ($menu) {
+              if($menu){
+                return Menu::find($menu)->name;
+              }else{
+                return "";
+              }
+
+            });
         $grid->depth('Depth');
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
@@ -129,14 +144,17 @@ class MenuItemController extends Controller
     protected function form()
     {
         $form = new Form(new MenuItem);
-
+        $menuitem = MenuItem::get()->pluck('label','id');
+        $menu_name = Menu::get()->pluck('name','id');
         $form->text('label', 'Label');
         $form->url('link', 'Link');
-        $form->number('parent', 'Parent');
+        //$form->number('parent', 'Parent');
+        $form->select('parent', 'parent')->options($menuitem);
+        $form->select('menu_id', 'Menu')->options($menu_name);
         $form->number('sort', 'Sort');
         $form->text('class', 'Class');
         $form->text('icon', 'Icon');
-        $form->number('menu_id', 'Menu id');
+        $form->select('menu_id', 'Menu')->options($menu_name);
         $form->number('depth', 'Depth');
 
         return $form;

@@ -83,13 +83,34 @@ class UserGuideController extends Controller
 
         $grid->id('Id');
         $grid->title('Title');
-        $grid->slug('Slug');
+        $grid->slug('Slug')->display(function ($slug) {
+              if($slug){
+                return route('guide.show',$slug);
+              }else{
+                return "";
+              }
+
+            });
         $grid->description('Description');
         $grid->seo_title('Seo title');
         $grid->seo_keyword('Seo keyword');
         $grid->seo_description('Seo description');
-        $grid->prev_item('Prev item');
-        $grid->next_item('Next item');
+        $grid->prev_item('Prev item')->display(function ($prev_item) {
+              if($prev_item){
+                return UserGuide::find($prev_item)->title;
+              }else{
+                return "";
+              }
+
+            });
+        $grid->next_item('Next item')->display(function ($next_item) {
+              if($next_item){
+                return UserGuide::find($next_item)->title;
+              }else{
+                return "";
+              }
+
+            });
         $grid->sort('Sort');
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
