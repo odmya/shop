@@ -8886,9 +8886,6 @@ body {
 .home_section_a {
   background-image: url(/uploads/images/home_banner_pic3.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  height: auto;
   color: white;
   background-color: #1C1B20;
   text-align: center;
@@ -8946,6 +8943,20 @@ body {
 .home_section_b_sub_a {
   background-color: white;
   padding: 50px 0px;
+}
+
+.home_section_b_sub_a dl {
+  float: left;
+  width: 100%;
+  text-align: left;
+  padding: 0px 15px;
+}
+
+@media (min-width: 768px) {
+  .home_section_b_sub_a dl {
+    width: 25%;
+    padding: 30px 15px;
+  }
 }
 
 .home_section_b_sub_c {
@@ -9232,8 +9243,7 @@ body {
 
 .order_page_c {
   background-image: url(/uploads/images/choose_bg.jpg);
-  background-repeat: no-repeat;
-  height: 390px;
+  min-height: 390px;
 }
 
 .order_page_c h2 {

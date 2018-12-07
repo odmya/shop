@@ -40,10 +40,8 @@
     <div class="row">
       <div class="col-xs-12"><h2>Download Full HD Videos in Original Quality with URL</h2></div>
       <div class="col-xs-12"><h6>With Fox Video Downloader, you're able to download videos or extract audio from YouTube, Facebook, Netflix, Vimeo, CBS, Twitter, Dailymotion, Lynda etc. You can Copy and paste a single video URL to the Fox video downloader to start downloading. Detailed guide on how to download videos >></h6></div>
-      <div class="col-xs-12 table-responsive home_section_b_sub_a">
-        <table class="table">
-          <tr>
-            <td>
+      <div class="col-xs-12 home_section_b_sub_a">
+
               <dl>
                 <dt>
                  10,000+ Video Sites Supported
@@ -53,8 +51,7 @@
                  <a href="./Reference.html" class="link" style="color: #25c15e;" target="_blank">(Full List&gt;&gt;)</a>
                 </dd>
               </dl>
-            </td>
-            <td>
+
               <dl>
                 <dt>
                  Download HD Video
@@ -63,8 +60,7 @@
                  4K UHD, 4K, 1920P, 1080P, 720P, 480P, 360P, etc.
                 </dd>
               </dl>
-            </td>
-            <td>
+
               <dl>
                 <dt>
                  Download YouTube to MP3
@@ -73,8 +69,7 @@
                  Download and convert YouTube to MP3 directly in high quality.
                 </dd>
                </dl>
-            </td>
-            <td>
+
               <dl>
                 <dt>
                  Download Audio Only
@@ -83,10 +78,7 @@
                  Download HD video song and audio tracks from YouTube and other sites.
                 </dd>
               </dl>
-            </td>
-          </tr>
-          <tr>
-            <td>
+
               <dl>
                 <dt>
                  Batch Download Videos
@@ -95,8 +87,7 @@
                  Download YouTube playlist in 1 click. Or download multiple videos with URLs together.
                 </dd>
               </dl>
-            </td>
-            <td>
+
               <dl>
                 <dt>
                  Player Plugin
@@ -105,15 +96,7 @@
                  Play downloaded YouTube videos and desktop videos with the built-in media player instantly.
                 </dd>
               </dl>
-            </td>
-            <td>
 
-            </td>
-            <td>
-
-            </td>
-          </tr>
-        </table>
 
       </div>
 
