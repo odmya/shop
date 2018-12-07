@@ -13,6 +13,11 @@ class PagesController extends Controller
   {
       return view('pages.root');
   }
+
+  public function order()
+  {
+      return view('pages.order');
+  }
   public function emailVerifyNotice(Request $request)
     {
         return view('pages.email_verify_notice');

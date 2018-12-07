@@ -2,114 +2,145 @@
 @section('title', '[OFFICIAL] Home')
 
 @section('content')
-<div class="container-fluid home_section_a">
+<div class="container-fluid home_section_a ">
 
-  <div class="container">
+  <div class="container homeBanner">
 
     <div class="row">
-      <div class="col-xs-12"><h2>iTube Studio for Mac</h2></div>
-      <div class="col-xs-12"><h1>Download Video in Full HD, 4K, 1440p, 1080p, etc.</h1></div>
+      <div class="col-xs-12"><h1>Fox Video Downloader</h1></div>
+      <div class="col-xs-12"><h2>Download full HD Videos from more than 10,000 video sharing sites.</h2></div>
       <div class="col-xs-12">
         <div class="row">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-8">
+            <div class="col-xs-12 col-sm-10 col-sm-push-1">
               <ul>
-                <li>· Download Video from 10,000 Video Sites</li>
-                <li>· Private Mode to Download Video in Secret</li>
-                <li>· Record Any Online Video from Any Site</li>
-                <li>· Ultimate Playlist Download in Batch</li>
-                <li>· Smart Download Then Convert Mode</li>
-                <li>· Turbo Mode at 3X Faster Download Speed</li>
+                <li>Download HD Video from YouTube, Dailymotion</li>
+                <li>Download HD Video from Facebook, Twitter, and more</li>
+                <li>Download YouTube to MP3 directly in high quality.</li>
+                <li>Download HD video song and audio tracks from YouTube and other sites.</li>
+                <li>Download YouTube/Lynda playlist in one click</li>
+                <li>Build your video library downloaded videos</li>
               </ul>
             </div>
         </div>
       </div>
-      <div class="col-xs-12"><a href="#" class="btn btn-primary btn-lg active" role="button">Try It Free <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> </a> <a href="{{ route('cart.addtocart',95)}}" class="btn btn-primary btn-lg active" role="button">Buy Now <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></div>
-      <div class="col-xs-12"> <a href="">Switch to Windows Version >> </a> </div>
-    </div>
-  </div>
+      <div class="col-xs-12 try_buy">
+        <a href="https://www.foxvideodownloader.com/download/ftp/FoxVideoDownloader.exe" class="btn_try">Try It Free </a>
 
+        <a href="{{route('home.order')}}" class="btn_buy">Buy Now </a>
 
-  <div class="row home_section_a_sub">
-    <div class="col-sm-push-3 col-sm-6 col-xs-12">
-      <div class="row">
-        <div class="col-xs-3"><p><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></p> Download Videos </div>
-        <div class="col-xs-3"><p><span class=" glyphicon glyphicon-ice-lolly " aria-hidden="true"></span></p> Record Online Video </div>
-        <div class="col-xs-3"><p><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span></p>Convert Videos</div>
-        <div class="col-xs-3"><p><span class="glyphicon glyphicon-retweet" aria-hidden="true"></span></p>Transfer to Ddevices</div>
       </div>
+
     </div>
   </div>
+
 </div>
 
 <div class="container-fluid home_section_b">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12"><h2>Download Full HD Videos with URL or Extension Plugin in 1 Click</h2></div>
-      <div class="col-xs-12"><h3>3X faster HD video downloader for YouTube, Facebook, Vimeo, Amazon and other video-sharing sites on your Windows & Mac computers. Moreover, iTube HD Video Downloader provides you with a Private Mode to protect your downloaded video in a password-protected folder.</h3></div>
-      <div class="col-xs-12">Disclaimer: iTube HD Video Downloader is only for personal use. Please don't use this downloader software for commercial purposes. </div>
-      <div class="col-xs-12 home_section_b_sub_a">
+      <div class="col-xs-12"><h2>Download Full HD Videos in Original Quality with URL</h2></div>
+      <div class="col-xs-12"><h6>With Fox Video Downloader, you're able to download videos or extract audio from YouTube, Facebook, Netflix, Vimeo, CBS, Twitter, Dailymotion, Lynda etc. You can Copy and paste a single video URL to the Fox video downloader to start downloading. Detailed guide on how to download videos >></h6></div>
+      <div class="col-xs-12 table-responsive home_section_b_sub_a">
         <table class="table">
           <tr>
             <td>
               <dl>
-                <dt>10,000+ Video Sites Supported</dt>
-                <dd>YouTube, Dailymotion, Facebook, Twitter, and more.</dd>
+                <dt>
+                 10,000+ Video Sites Supported
+                </dt>
+                <dd>
+                 YouTube, Dailymotion, Facebook, Twitter, and more.
+                 <a href="./Reference.html" class="link" style="color: #25c15e;" target="_blank">(Full List&gt;&gt;)</a>
+                </dd>
               </dl>
             </td>
             <td>
               <dl>
-                <dt>10,000+ Video Sites Supported</dt>
-                <dd>YouTube, Dailymotion, Facebook, Twitter, and more.</dd>
+                <dt>
+                 Download HD Video
+                </dt>
+                <dd>
+                 4K UHD, 4K, 1920P, 1080P, 720P, 480P, 360P, etc.
+                </dd>
               </dl>
             </td>
             <td>
               <dl>
-                <dt>10,000+ Video Sites Supported</dt>
-                <dd>YouTube, Dailymotion, Facebook, Twitter, and more.</dd>
-              </dl>
+                <dt>
+                 Download YouTube to MP3
+                </dt>
+                <dd>
+                 Download and convert YouTube to MP3 directly in high quality.
+                </dd>
+               </dl>
             </td>
             <td>
               <dl>
-                <dt>10,000+ Video Sites Supported</dt>
-                <dd>YouTube, Dailymotion, Facebook, Twitter, and more.</dd>
+                <dt>
+                 Download Audio Only
+                </dt>
+                <dd>
+                 Download HD video song and audio tracks from YouTube and other sites.
+                </dd>
               </dl>
             </td>
           </tr>
           <tr>
             <td>
               <dl>
-                <dt>10,000+ Video Sites Supported</dt>
-                <dd>YouTube, Dailymotion, Facebook, Twitter, and more.</dd>
+                <dt>
+                 Batch Download Videos
+                </dt>
+                <dd>
+                 Download YouTube playlist in 1 click. Or download multiple videos with URLs together.
+                </dd>
               </dl>
             </td>
             <td>
               <dl>
-                <dt>10,000+ Video Sites Supported</dt>
-                <dd>YouTube, Dailymotion, Facebook, Twitter, and more.</dd>
+                <dt>
+                 Player Plugin
+                </dt>
+                <dd>
+                 Play downloaded YouTube videos and desktop videos with the built-in media player instantly.
+                </dd>
               </dl>
             </td>
             <td>
-              <dl>
-                <dt>10,000+ Video Sites Supported</dt>
-                <dd>YouTube, Dailymotion, Facebook, Twitter, and more.</dd>
-              </dl>
+
             </td>
             <td>
-              <dl>
-                <dt>10,000+ Video Sites Supported</dt>
-                <dd>YouTube, Dailymotion, Facebook, Twitter, and more.</dd>
-              </dl>
+
             </td>
           </tr>
         </table>
 
       </div>
-      <div class="col-xs-12 home_section_b_sub_c"><img src="{{ URL::asset('uploads/images/arrow_down.png') }}"></div>
 
     </div>
   </div>
-  <div class="col-xs-12 home_section_b_sub_b"><img class="img-responsive center-block" src="{{ URL::asset('uploads/images/gs_logo.png') }}"></div>
+
+
+</div>
+
+<div class="container home_section_c">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Fox video Downloader Guide on How to Download Video</h2>
+      </div>
+      <div class="col-xs-12 col-sm-10 col-sm-push-1">
+        <ul>
+          <li>Best Video Downloader</li>
+          <li>Top 11 Free Sites to Download TV Series Episodes or TV Shows in MP4</li>
+          <li>Best 10 Websites to Download YouTube Videos</li>
+          <li>How to Download YouTube</li>
+          <li>URL Video Downloader - Directly Download Video from URL</li>
+          <li>How to Download Video</li>
+          <li>How to Download Netflix</li>
+        </ul>
+      </div>
+    </div>
+
 
 </div>
 @stop

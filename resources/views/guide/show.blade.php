@@ -34,7 +34,7 @@
  @endforeach
 </div>
 </div>
-<div class="col-sm-9">
+<div class="col-sm-9 userguide_show">
 <h1>{{$guideitem->title}}</h1>
 <p> {!! $guideitem->description !!}</p>
 
@@ -64,6 +64,7 @@
 
 $("#userguide .selected").css("text-decoration",'underline');
 $("#userguide .selected").parents(".panel-collapse").addClass('collapse in');
+$(".userguide_show img").addClass('img-responsive');
 
   });
 </script>

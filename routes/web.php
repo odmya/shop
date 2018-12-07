@@ -13,6 +13,8 @@
 
 Route::get('/', 'PagesController@root')->name('root');
 
+Route::get('/order.html', 'PagesController@order')->name('home.order');
+
 
 
 Auth::routes();

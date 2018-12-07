@@ -10,7 +10,7 @@ class Information extends Model
 
   use Sluggable;
   protected $fillable = [
-                  'title','slug','seo_title','seo_keyword','seo_description', 'description', 'displayed'
+                  'title','sub_title','slug','seo_title','seo_keyword','seo_description', 'description', 'displayed'
   ];
 
     public function sluggable()

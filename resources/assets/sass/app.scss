@@ -8,6 +8,8 @@
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
+$screen-sm-min:"768px";
+
 
 // 通用样式
 body {
@@ -33,16 +35,18 @@ body {
 
 .footer {
     position: absolute;
-    bottom: 0;
     width: 100% ;
+    text-align: center;
+    bottom: -20px;
+    padding:10px 0px;
+
     /* Set the fixed height of the footer here */
-    height: 100px;
+
     background-color: #161718;
 
     .container {
 
         p {
-            margin: 19px 0;
             color: #c1c1c1;
             text-align: center;
 
@@ -58,9 +62,9 @@ body {
     }
 
     .footer_information li{
-      float:left;
       margin-left: 10px;
-      color:white
+      color:white;
+      display: inline-block;
     }
     .footer_information li a{
       color: white;
@@ -454,18 +458,12 @@ body {
 }
 
 .home_section_a{
-  a {
-  color: white;
-  text-decoration: none;
-
-  &:hover {
-    color: white;
-    text-decoration: underline;
-  }
-}
 
   li{
     text-align: left;
+    float: left;
+    width:50%;
+    padding: 5px 0;
   }
 }
 
@@ -487,12 +485,200 @@ body {
   background-position:bottom;
   background-repeat:no-repeat;
   text-align: center;
+  padding: 20px 0;
+  h2{
+    font-size: 40px;
+  }
+  h6{
+    font-size: 16px;
+    color:#333;
+  }
+  .table{
+    text-align: left;
+    td{
+      border-top:none;
+    }
+  }
+
 }
 
 .home_section_b_sub_a{
   background-color:white;
+  padding: 50px 0px;
 }
 
 .home_section_b_sub_c{
   margin-bottom: 20px;
 }
+
+.btn_try, .btn_buy {display:inline-block; border:solid 2px #fff; border-radius:100px; font-size:24px; line-height:54px; font-weight:400; color:#6D3896;-webkit-transition: all 0.3s;-moz-transition: all 0.3s;transition: all 0.3s;width:200px;}
+
+.btn_try{ background-color:#fff;}
+.btn_buy {color:#fff;}
+.btn_try:hover {text-decoration:none; background-color:inherit;color:#fff;}
+.btn_buy:hover {text-decoration:none; background-color:#fff;color:#6D3896;}
+
+.homeBanner{
+    padding: 120px 0px;
+    h1{
+      font-size: 52px;
+    }
+   .try_buy{ text-align:center;margin-top:30px;}
+   .try_buy a{margin:8px;}
+   .try_buy a i{font-size:28px;}
+}
+
+.home_section_c{
+  padding: 50px 0px;
+  h2{
+    text-align: center;
+    font-size: 40px;
+  }
+
+  li{
+    text-align: left;
+    float: left;
+    width:50%;
+    padding: 5px 0;
+  }
+
+}
+
+
+.contact_us_banner{
+  background-image: url(/uploads/images/about_bg.jpg);
+  background-position:top right;
+  background-repeat:no-repeat;
+  text-align: left;
+  .contact_us_section_a{
+    height:200px;
+  }
+  h1{
+    font-size: 48px;
+    line-height: 1.2em;
+    font-weight: 500;
+  }
+
+  h2{
+    font-size: 24px;
+  }
+
+  .contact_us_section_b{
+    background: #fff;
+    box-shadow: 0 0 8px #d2d2d2;
+    padding:15px;
+
+    li{
+      text-align: left;
+      float: left;
+      padding:10px 0px;
+      width: 100%;
+      @media (min-width: $screen-sm-min) { width: 25%;}
+    }
+
+    p{
+      clear:both;
+    }
+
+  }
+
+  .contact_us_size{
+    width:50%;
+  }
+}
+
+.order_page_banner{
+    @media (min-width: $screen-sm-min) {
+      background-image: url(/uploads/images/buy_top_bg.jpg);
+      background-position:top right;
+      background-repeat:no-repeat;
+
+    }
+
+  text-align: left;
+
+  .order_page_a{
+    height:300px;
+  }
+
+  .order_page_a p{
+    font-size: 24px;
+  }
+
+}
+
+
+.order_page_b{
+  background: #f7f7f7;
+
+}
+.safe_img{margin-top:40px;}
+
+.add_cart{display:inline-block; background:#fc4f29;color:#fff; font-size:18px; font-weight:500; text-align:center;width:176px;height:46px; line-height:46px; border-radius:46px;box-shadow:2px 2px 8px #d9d9d9;background: -moz-linear-gradient(left,  #fc4f29 0%, #12dbd8 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#fc4f29), color-stop(100%,#ffa200));
+    background: -webkit-linear-gradient(left,  #fc4f29 0%,#ffa200 100%);
+    background: -o-linear-gradient(left,  #fc4f29 0%,#ffa200 100%);
+    background: -ms-linear-gradient(left,  #fc4f29 0%,#ffa200 100%);
+    background: linear-gradient(to right,  #fc4f29 0%,#ffa200 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc4f29', endColorstr='#ffa200',GradientType=180 );}
+
+.add_cart:hover{ text-decoration:none;background:#fc4f29;}
+.store_buy .item {
+  @media (min-width: $screen-sm-min) {
+    width:45%;
+    float: left;
+  }
+   background:#fff;padding:2% 1.5%;min-height:360px;margin:0 1%; box-shadow:0 0 8px #d9d9d9; border-top:4px solid #6D3896;
+}
+.store_buy .item h3{ font-size:20px; font-weight:500; text-align:center; line-height:1.2em;}
+.store_buy .item dl{padding:15px 0;height:100px;}
+.store_buy .item dt{font-size:24px; font-weight:500;text-align:center; line-height:1.8em;}
+.store_buy .item dd{text-align:center; line-height:1.6em;margin-top:5px;color:#666;padding:0 5%;}
+.store_buy .item .price{color:#fc5228; font-size:36px; font-weight:500;text-align:center;margin-top:30px; line-height:1em;}
+.store_buy .item .price span{ font-size:24px;color:#666; text-decoration:line-through; font-weight:400;}
+.store_buy .item .addtocart{ text-align:center;margin-top:10px;}
+.store_buy .item .otherBtn{margin-top:10px; text-align:center;}
+.store_buy .item .otherBtn strong{display:block;}
+
+.accept_payment{
+  text-align: center;
+  margin: 30px 0px;
+  img{
+    max-width: 100%;
+    height: auto;
+    @media (min-width: $screen-sm-min) {
+      display: inline;
+    }
+  }
+}
+
+.safe_box{padding:60px 0;}
+.safe_box .item dl{margin-top:15px;}
+.safe_box .item dt{ font-size:18px; font-weight:500;}
+.safe_box .item dd{margin-top:15px;}
+
+.order_page_c{
+  background-image: url(/uploads/images/choose_bg.jpg);
+  background-repeat:no-repeat;
+  height: 390px;
+
+  h2{
+
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.2em;
+    color: #fff;
+  }
+}
+
+.choose{margin-top:50px;}
+.choose .item{
+  @media (min-width: $screen-sm-min) {
+    float:left;width:15%;
+  }
+  height:154px;margin-left:15px;border:2px solid #fff; border-radius:200px; text-align:center;color:#fff;
+}
+.choose .item:first-child{margin-left:0;}
+.choose .item strong{display:block;font-size:30px;margin-top:25px;}
+.choose .item p{margin-top:10px;padding:0 15px;}

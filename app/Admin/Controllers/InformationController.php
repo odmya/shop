@@ -136,6 +136,7 @@ class InformationController extends Controller
         $form = new Form(new Information);
 
         $form->text('title', 'Title');
+        $form->text('sub_title', 'sub_title');
         $form->text('slug', 'Slug');
         $form->ckeditor('description', 'Description');
         $form->text('seo_title', 'Seo title');
