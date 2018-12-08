@@ -84,7 +84,18 @@ class TipsController extends Controller
 
         $grid->id('Id');
         $grid->title('Title');
-        $grid->slug('Slug');
+        $grid->slug('Slug')->display(function ($slug) {
+              $tip = Tip::whereSlug($slug)->first();
+              //$category_slug = TipCategory::find($tip->);
+              if($slug){
+                return route('tips.show',array('category_slug'=>$tip->tip_category->slug,"slug"=>$slug));
+              }else{
+                return "";
+              }
+
+            });
+
+
         $grid->description('Description');
         $grid->seo_title('Seo title');
         $grid->seo_keyword('Seo keyword');

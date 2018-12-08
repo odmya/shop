@@ -58,7 +58,7 @@
             <tr data-id="{{ $item->rawId() }}">
 
               <td >
-                <a target="_blank" href="{{ route('products.show', [$item->id]) }}">{{ $item->name }}</a>
+                 {{ $item->name }}
               </td>
               <td><span class="price">{{$default_curreny->code }} {{$default_curreny->symbol_left }} {{ number_format($item->price *  $default_curreny->value,2)}} {{$default_curreny->symbol_right }}</span></td>
               <td class="col-xs-2">

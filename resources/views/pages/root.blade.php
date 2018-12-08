@@ -112,14 +112,11 @@
         <h2>Fox video Downloader Guide on How to Download Video</h2>
       </div>
       <div class="col-xs-12 col-sm-10 col-sm-push-1">
+
         <ul>
-          <li>Best Video Downloader</li>
-          <li>Top 11 Free Sites to Download TV Series Episodes or TV Shows in MP4</li>
-          <li>Best 10 Websites to Download YouTube Videos</li>
-          <li>How to Download YouTube</li>
-          <li>URL Video Downloader - Directly Download Video from URL</li>
-          <li>How to Download Video</li>
-          <li>How to Download Netflix</li>
+          @foreach($tips as $tip)
+            <li><a href="{{route('tips.show',array('category_slug'=>$tip->tip_category->slug,'slug'=>$tip->slug))}}">{{$tip->title}}</a></li>
+          @endforeach
         </ul>
       </div>
     </div>

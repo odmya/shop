@@ -755,3 +755,30 @@ font-size: 25px;
 font-weight: 700;
 color: #ff6000;
 }
+
+
+.tips_banner{
+  height:300px;
+  background-color:#25C15E;
+  h1{
+    color:#fff;
+    font-size: 36px;
+    line-height: 1.2em;
+    font-weight: 600;
+    @media (min-width: $screen-sm-min) {
+      margin-top: 100px;
+    }
+
+    text-align: center;
+  }
+}
+.tips_banner{
+  position: relative;
+}
+.tips_section_b{
+  background: #fff;
+  box-shadow: 0 0 8px #d2d2d2;
+  padding:15px;
+  position: relative;
+  top:-40px;
+}
