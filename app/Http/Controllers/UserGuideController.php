@@ -15,8 +15,8 @@ class UserGuideController extends Controller
       $menu_user_guide = $menuList->menu_item->where('parent',0);
       $guideitem = UserGuide::find(UserGuide::min('id'));
 
-
-      return view('guide.index', ['guideitem' => $guideitem,'menu_user_guide' => $menu_user_guide]);
+      return redirect(route('guide.show',$guideitem->slug));
+      //return view('guide.index', ['guideitem' => $guideitem,'menu_user_guide' => $menu_user_guide]);
 
     }
 

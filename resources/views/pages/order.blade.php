@@ -52,7 +52,7 @@
          </dd>
         </dl>
         <div class="addtocart">
-         <a href="https://www.foxvideodownloader.com/cart"  class="add_cart">Add to Cart <i class="fm fm-cart"></i></a>
+         <a href="{{route('cart.addtocart',95)}}"  class="add_cart">Add to Cart <i class="fm fm-cart"></i></a>
         </div>
       </div>
       <div class="col-sm-12 accept_payment">  We accept <img src="uploads/images/pay_pic.png" /> </div>

@@ -693,3 +693,65 @@ body {
 .choose .item:first-child{margin-left:0;}
 .choose .item strong{display:block;font-size:30px;margin-top:25px;}
 .choose .item p{margin-top:10px;padding:0 15px;}
+
+
+.user_guide{
+
+  background-image: url(/uploads/images/banner4.jpg);
+  background-position:top right;
+  background-repeat:no-repeat;
+  text-align: left;
+  .contact_us_section_a{
+    height:200px;
+  }
+  h1{
+    font-size: 24px;
+    line-height: 1.2em;
+    font-weight: 500;
+  }
+
+  h2{
+    font-size: 48px;
+  }
+
+  .user_guide_section_a p{
+    font-size: 24px;
+    line-height: 1.2em;
+    padding:20px 0px;
+  }
+
+  .user_guide_section_b{
+    background: #fff;
+    box-shadow: 0 0 8px #d2d2d2;
+    padding:15px;
+
+
+    p{
+      clear:both;
+    }
+
+  }
+
+
+
+}
+
+.payment_tip{
+  height:80px;
+  background: url(/uploads/images/payment_tip.gif) center 0 no-repeat #4897ee;
+  font-size: 20px;
+text-align: center;
+color:#fff;
+padding-top:20px;
+}
+
+.cart_box{
+  margin-top: 15px;
+  padding:10px;
+}
+
+.total_price{
+font-size: 25px;
+font-weight: 700;
+color: #ff6000;
+}

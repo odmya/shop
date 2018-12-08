@@ -3,7 +3,15 @@
 @section('title', 'Cart')
 
 @section('content')
-<div class="container">
+<div class="container-fluid payment_tip">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 payment_tip_left">1. Billing Information</div>
+      <div class="col-xs-6 payment_tip_right">2. Finish Order</div>
+    </div>
+  </div>
+</div>
+<div class="container cart_box">
 <div class="row">
 <div class="col-sm-12 col-xs-12">
 <div class="panel panel-default">
@@ -19,9 +27,9 @@
       </div>
     @endif
     <div class="row">
-        <div class="col-xs-12 col-sm-3"><p class="navbar-text">我的购物车</p></div>
-        <div class="col-xs-12 col-sm-9">
-          <form action="{{ route('cart.index') }}" class="curreny-form navbar-right">
+        <div class="col-xs-12 col-sm-3"><p>Products in your shopping cart</p></div>
+        <div class="col-xs-12 col-sm-9 text-right">
+          <form action="{{ route('cart.index') }}" class="form-inline">
             <div class="form-group form-group-sm">
               <label>Show price in:</label>
                  <select name="curreny" class="form-control">
@@ -34,48 +42,53 @@
           </form>
         </div>
     </div>
-    <table class="table table-striped table-hover">
-      <thead>
-      <tr>
-        <th><input type="checkbox" id="select-all"></th>
-        <th>商品信息</th>
-        <th>单价</th>
-        <th>数量</th>
-        <th>操作</th>
-      </tr>
-      </thead>
-      <tbody class="product_list">
-      @foreach($cartItems as $item)
-        <tr data-id="{{ $item->rawId() }}">
-          <td>
-            <input type="checkbox" name="select" value="{{ $item->id }}">
-          </td>
-          <td >
-            <a target="_blank" href="{{ route('products.show', [$item->id]) }}">{{ $item->name }}</a>
-          </td>
-          <td><span class="price">{{$default_curreny->code }} {{$default_curreny->symbol_left }} {{ number_format($item->price *  $default_curreny->value,2)}} {{$default_curreny->symbol_right }}</span></td>
-          <td class="col-xs-2">
+    <div class="row">
+      <div class="col-xs-12 table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+          <tr>
+            <th><input type="checkbox" id="select-all"></th>
+            <th>Product/Service Name</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody class="product_list">
+          @foreach($cartItems as $item)
+            <tr data-id="{{ $item->rawId() }}">
+              <td>
+                <input type="checkbox" name="select" value="{{ $item->id }}">
+              </td>
+              <td >
+                <a target="_blank" href="{{ route('products.show', [$item->id]) }}">{{ $item->name }}</a>
+              </td>
+              <td><span class="price">{{$default_curreny->code }} {{$default_curreny->symbol_left }} {{ number_format($item->price *  $default_curreny->value,2)}} {{$default_curreny->symbol_right }}</span></td>
+              <td class="col-xs-2">
 
-            <div class="input-group">
-              <span class="input-group-btn">
-                <button class="btn btn-default btn_sub" type="button">-</button>
-              </span>
-              <input type="text" class="form-control" name="amount" value="{{ $item->qty }}">
-              <span class="input-group-btn">
-                <button class="btn btn-default btn_add" type="button">+</button>
-              </span>
-            </div>
+                <div class="input-group">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default btn_sub" type="button">-</button>
+                  </span>
+                  <input type="text" class="form-control" name="amount" value="{{ $item->qty }}">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default btn_add" type="button">+</button>
+                  </span>
+                </div>
 
 
-          </td>
-          <td>
-            <button class="btn btn-xs btn-danger btn-remove">移除</button>
-          </td>
-        </tr>
-      @endforeach
-      </tbody>
-    </table>
-<div class="navbar-right">Total: {{$default_curreny->code }} {{$default_curreny->symbol_left }}  {{$total_price}} {{$default_curreny->symbol_right }}</div>
+              </td>
+              <td>
+                <button class="btn btn-xs btn-danger btn-remove">Delete</button>
+              </td>
+            </tr>
+          @endforeach
+          </tbody>
+        </table>
+      </div>
+      <div class="col-xs-12 text-right ">Total: <span class="total_price">{{$default_curreny->code }} {{$default_curreny->symbol_left }}{{$total_price}} {{$default_curreny->symbol_right }}</div>
+    </span></div>
+
 <div class="row">
         <div class="col-xs-11">
           <form  class="navbar-form navbar-right payment-checkout " role="form" id="order-form" action="{{ route('payment.checkout') }}" method="post">
