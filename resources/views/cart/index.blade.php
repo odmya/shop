@@ -18,7 +18,7 @@
   <div class="panel-body">
     @if (count($errors) > 0)
       <div class="alert alert-danger">
-        <h4>有错误发生：</h4>
+        <h4>An error has occurred:</h4>
         <ul>
           @foreach ($errors->all() as $error)
             <li><i class="glyphicon glyphicon-remove"></i> {{ $error }}</li>
@@ -29,7 +29,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-3"><p>Products in your shopping cart</p></div>
         <div class="col-xs-12 col-sm-9 text-right">
-          <form action="{{ route('cart.index') }}" class="form-inline">
+          <form action="{{ route('cart.index') }}" class="form-inline curreny-form">
             <div class="form-group form-group-sm">
               <label>Show price in:</label>
                  <select name="curreny" class="form-control">
@@ -47,8 +47,7 @@
         <table class="table table-striped table-hover">
           <thead>
           <tr>
-            <th><input type="checkbox" id="select-all"></th>
-            <th>Product/Service Name</th>
+              <th>Product/Service Name</th>
             <th>Unit Price</th>
             <th>Quantity</th>
             <th></th>
@@ -57,9 +56,7 @@
           <tbody class="product_list">
           @foreach($cartItems as $item)
             <tr data-id="{{ $item->rawId() }}">
-              <td>
-                <input type="checkbox" name="select" value="{{ $item->id }}">
-              </td>
+
               <td >
                 <a target="_blank" href="{{ route('products.show', [$item->id]) }}">{{ $item->name }}</a>
               </td>
@@ -149,23 +146,10 @@ $('.btn_add').click(function () {
       // closest() 方法可以获取到匹配选择器的第一个祖先元素，在这里就是当前点击的 移除 按钮之上的 <tr> 标签
       // data('id') 方法可以获取到我们之前设置的 data-id 属性的值，也就是对应的 SKU id
       var id = $(this).closest('tr').data('id');
-      swal({
-        title: "确认要将该商品移除？",
-        icon: "warning",
-        buttons: ['取消', '确定'],
-        dangerMode: true,
-      })
-      .then(function(willDelete) {
-        // 用户点击 确定 按钮，willDelete 的值就会是 true，否则为 false
-        if (!willDelete) {
-          return;
-        }
-        axios.post('{{ route('cart.deletecart') }}', {
-          rawid: id,
-        }).then(function() {
-          location.reload();
-        });
-
+      axios.post('{{ route('cart.deletecart') }}', {
+        rawid: id,
+      }).then(function() {
+        location.reload();
       });
     });
 
@@ -213,7 +197,7 @@ $('.btn_add').click(function () {
           });
           axios.post('{{ route('orders.store') }}', req)
             .then(function (response) {
-              swal('订单提交成功', '', 'success');
+              swal('Order Successful!', '', 'success');
             }, function (error) {
               if (error.response.status === 422) {
                 // http 状态码为 422 代表用户输入校验失败
@@ -227,7 +211,7 @@ $('.btn_add').click(function () {
                 swal({content: $(html)[0], icon: 'error'})
               } else {
                 // 其他情况应该是系统挂了
-                swal('系统错误', '', 'error');
+                swal('System Error!', '', 'error');
               }
             });
         });
