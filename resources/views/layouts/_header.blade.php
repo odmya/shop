@@ -12,17 +12,11 @@
             </a>
         </div>
         <div class="collapse navbar-collapse top_nav_item" id="app-navbar-collapse">
-
-
             <ul class="nav navbar-nav navbar-right">
-                <!-- 登录注册链接开始 -->
                 <li>
                   <a href="{{ route('cart.index') }}"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
                 </li>
-
-                <!-- 登录注册链接结束 -->
             </ul>
-
             <ul class="nav navbar-nav navbar-right">
               @include(config('laravel-menu.views.bootstrap-items'), ['items' => $TopNavBar->roots()])
             </ul>

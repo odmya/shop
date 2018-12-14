@@ -133,6 +133,10 @@ public function index(Request $request)
 
   }
   $tmp_total = 0;
+if(count($cartItems) == false){
+  return redirect(route('home.order'));
+}
+
   foreach($cartItems as $item){
     $tmp['sku_id'] =$item->id;
     $tmp['name'] =$item->name;

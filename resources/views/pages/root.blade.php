@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="col-xs-12 try_buy">
-        <a href="https://www.foxvideodownloader.com/download/ftp/FoxVideoDownloader.exe" class="btn_try">Try It Free </a>
+        <a href="https://www.foxvideodownloader.com/download/ftp/FoxVideoDownloader.exe" class="btn_try">miniInstaller.exe</a>
 
         <a href="{{route('home.order')}}" class="btn_buy">Buy Now </a>
 
