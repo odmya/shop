@@ -91,7 +91,7 @@ class UserGuideController extends Controller
               }
 
             });
-        $grid->description('Description');
+      //  $grid->description('Description');
         $grid->seo_title('Seo title');
         $grid->seo_keyword('Seo keyword');
         $grid->seo_description('Seo description');
