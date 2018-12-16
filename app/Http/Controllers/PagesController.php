@@ -13,7 +13,7 @@ class PagesController extends Controller
   public function root()
   {
 
-    $tips = Tip::paginate(8);
+    $tips = Tip::where('displayed',1)->paginate(8);
     $seo_title = "Fox Video Downloader - A Quck Video Downloader [OFFICIAL]";
     $seo_description = "Fox Video Downloader can download videos from full HD Videos from more than 10,000 video sharing sites.";
 
