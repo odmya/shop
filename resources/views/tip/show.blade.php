@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', $tip->title)
+@section('title', $seo_title)
+@section('description', $seo_description)
 
 @section('content')
 <div class="container-fluid tips_banner">

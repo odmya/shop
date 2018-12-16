@@ -26,8 +26,12 @@ class UserGuideController extends Controller
       $menu_user_guide = $menuList->menu_item->where('parent',0);
       $guideitem = UserGuide::whereSlug($slug)->first();
 
+      $seo_title = $guideitem->seo_title?$guideitem->seo_title:$guideitem->title;
+      $seo_description = $guideitem->seo_description?$guideitem->seo_description:substr(strip_tags($guideitem->description),0,200);
 
-      return view('guide.show', ['guideitem' => $guideitem,'menu_user_guide' => $menu_user_guide]);
+
+
+      return view('guide.show', ['guideitem' => $guideitem,'menu_user_guide' => $menu_user_guide, 'seo_title'=>$seo_title,'seo_description'=>trim($seo_description)]);
 
     }
 }

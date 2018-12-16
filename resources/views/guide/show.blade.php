@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', $guideitem->title)
+@section('title', $seo_title)
+@section('description', $seo_description)
 
 @section('content')
 

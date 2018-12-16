@@ -27,9 +27,11 @@ class TipController extends Controller
       $nexttip = Tip::find($nexttip_id);
     }
 
+    $seo_title = $tip->seo_title?$tip->seo_title:$tip->title;
+    $seo_description = $tip->seo_description?$tip->seo_description:substr(strip_tags($tip->description),0,200);
 
 
-    return view('tip.show', ['tip' => $tip,'prevtip'=>$prevtip,'nexttip'=>$nexttip]);
+    return view('tip.show', ['tip' => $tip,'prevtip'=>$prevtip,'nexttip'=>$nexttip, 'seo_title'=>$seo_title,'seo_description'=>trim($seo_description)]);
 
   }
 

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'You are Buying: Fox Video Downloader!')
+@section('title', $seo_title)
+@section('description', $seo_description)
 
 @section('content')
 

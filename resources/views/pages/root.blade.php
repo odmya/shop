@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('title', '[OFFICIAL] Home')
-
+@section('title', $seo_title)
+@section('description', $seo_description)
 @section('content')
 <div class="container-fluid home_section_a ">
 

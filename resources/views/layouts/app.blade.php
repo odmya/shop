@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="shortcut icon" href="{{ URL::asset('uploads/images/favicon.png') }}" mce_href="{{ URL::asset('uploads/images/favicon.png') }}" type="image/x-icon" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', '') - Fox video Downloader</title>
-
+    <title>@yield('title', 'Fox video Downloader')</title>
+    <meta name="description" content="@yield('description', 'Fox video Downloader')" />
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
