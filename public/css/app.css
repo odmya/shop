@@ -9379,3 +9379,13 @@ body {
   top: -40px;
 }
 
+.navbar-brand img {
+  display: inline;
+}
+
+.navbar-brand span {
+  font-size: 16px;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+

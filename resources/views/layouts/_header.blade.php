@@ -7,9 +7,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ url('/') }}"><img alt="Brand" src="{{ URL::asset('uploads/images/logo.png') }}">
-
+            <a class="navbar-brand" href="{{ url('/') }}"><img alt="Fox Video Downloader" title="Fox Video Downloader" src="{{ URL::asset('uploads/images/logo.png') }}">
+              <span>Fox Video Downloader</span>
             </a>
+
         </div>
         <div class="collapse navbar-collapse top_nav_item" id="app-navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
