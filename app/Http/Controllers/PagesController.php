@@ -14,7 +14,7 @@ class PagesController extends Controller
   {
 
     $tips = Tip::where('displayed',1)->paginate(8);
-    $seo_title = "Fox Video Downloader - A Quck Video Downloader [OFFICIAL]";
+    $seo_title = "Fox Video Downloader - A Quick Video Downloader [OFFICIAL]";
     $seo_description = "Fox Video Downloader can download videos from full HD Videos from more than 10,000 video sharing sites.";
 
       return view('pages.root', ['tips' => $tips,'seo_title'=>$seo_title,'seo_description'=>$seo_description]);
