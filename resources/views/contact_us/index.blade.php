@@ -9,7 +9,7 @@
 <div class="row ">
   <div class="col-sm-12 col-xs-12 contact_us_section_a">
     <h1>Contact Us</h1> Email: support#foxvideodownloader.com(replace # with @)
-    <br /> For support inquires please visit
+    <br /> For support inquiries please visit
     <a href="https://www.foxvideodownloader.com/guide">HERE</a>
   </div>
 <div class="col-sm-12 col-xs-12 contact_us_section_b">
