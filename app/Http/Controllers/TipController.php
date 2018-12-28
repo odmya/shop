@@ -38,13 +38,13 @@ class TipController extends Controller
 
   protected function getPrevTipId($id)
   {
-    return Tip::where('id', '<', $id)->max('id');
+    return Tip::where('id', '<', $id)->where('displayed',1)->max('id');
   }
 
 
   protected function getNextTipId($id)
   {
-    return Tip::where('id', '>', $id)->min('id');
+    return Tip::where('id', '>', $id)->where('displayed',1)->min('id');
   }
 
 
