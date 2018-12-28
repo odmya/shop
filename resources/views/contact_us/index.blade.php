@@ -8,16 +8,21 @@
   <div class="container">
 <div class="row ">
   <div class="col-sm-12 col-xs-12 contact_us_section_a">
-    <h1>Contact Us</h1> Email: support#foxvideodownloader.com(replace # with @)
-    <br /> For support inquiries please visit
-    <a href="https://www.foxvideodownloader.com/guide">HERE</a>
+    <h1>Contact Us</h1> <b>Email:</b> support#foxvideodownloader.com(replace # with @)
+<br />
+    <b>Address:</b> Foxvideodownloader <br />
+529 Main Street, Box 103, Grafton, OH 44044, USA <br />
+     <b>Business Hours:</b> Monday to Friday 8.30am - 5.00pm
+     <br /><br />
+       For support inquiries please visit
+         <a href="https://www.foxvideodownloader.com/guide">HERE</a>
+
   </div>
 <div class="col-sm-12 col-xs-12 contact_us_section_b">
 
 <h2> Fox Video Downloader Studio, founded on April 10, 2016 </h2>
-<h6>We is dedicated to developing the most powerful and user-friendly DVD, video, DRM, YouTube and PDF software.With professional R&D center, rigorous testing process and instant online service system, Fox Video Downloader Studio provides high quality software and gains huge reputation among its users.
-</h6>
-
+<h6>Fox Video Downloader can download full HD Videos from more than 10,000 video sharing sites. see more detail. please visit <a href="https://www.foxvideodownloader.com/reference.html">here</a>.</h6>
+<p>You can submit the following form online ( * required ): </p>
 
   @if (count($errors) > 0)
       <div class="alert alert-danger">
