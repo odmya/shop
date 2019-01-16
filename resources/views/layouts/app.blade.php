@@ -9,6 +9,9 @@
     <title>@yield('title', 'Fox video Downloader')</title>
     <meta name="description" content="@yield('description', 'Fox video Downloader')" />
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    @if(isset($canonical))
+    <link rel="canonical" href="{{$canonical}}" />
+    @endif
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131415452-1"></script>
     <script>
@@ -18,7 +21,7 @@
 
       gtag('config', 'UA-131415452-1');
     </script>
-    
+
 </head>
 <body>
     <div id="app" class="{{ route_class() }}-page">

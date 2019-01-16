@@ -115,7 +115,7 @@
 
         <ul>
           @foreach($tips as $tip)
-            <li><a href="{{route('tips.show',array('category_slug'=>$tip->tip_category->slug,'slug'=>$tip->slug))}}">{{$tip->title}}</a></li>
+            <li><a href="{{route('tips.display',array('slug'=>$tip->slug))}}">{{$tip->title}}</a></li>
           @endforeach
         </ul>
       </div>

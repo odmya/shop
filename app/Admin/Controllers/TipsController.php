@@ -88,7 +88,7 @@ class TipsController extends Controller
               $tip = Tip::whereSlug($slug)->first();
               //$category_slug = TipCategory::find($tip->);
               if($slug){
-                return route('tips.show',array('category_slug'=>$tip->tip_category->slug,"slug"=>$slug));
+                return route('tips.display',array("slug"=>$slug));
               }else{
                 return "";
               }

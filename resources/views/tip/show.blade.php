@@ -29,14 +29,14 @@
 <div class="row">
   <div class="col-sm-6">
     @if($prevtip)
-  Previous:  <a href="{{route('tips.show',array('category_slug'=>$prevtip->tip_category->slug,'slug'=>$prevtip->slug))}}">{{$prevtip->title}}</a>
+  Previous:  <a href="{{route('tips.display',array('slug'=>$prevtip->slug))}}">{{$prevtip->title}}</a>
     @endif
 
   </div>
 
 <div class="col-sm-6">
   @if($nexttip)
-  Next:  <a href="{{route('tips.show',array('category_slug'=>$nexttip->tip_category->slug,'slug'=>$nexttip->slug))}}">{{$nexttip->title}}</a>
+  Next:  <a href="{{route('tips.display',array('slug'=>$nexttip->slug))}}">{{$nexttip->title}}</a>
   @endif
 
 </div>
