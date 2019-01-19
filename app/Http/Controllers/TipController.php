@@ -10,6 +10,8 @@ use App\Models\Tip;
 class TipController extends Controller
 {
 
+//display tip information
+
   public function show($category_slug,$slug){
 
 
