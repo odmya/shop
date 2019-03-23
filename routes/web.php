@@ -85,6 +85,11 @@ Route::get('guide/{slug}.html', 'UserGuideController@show')->name('guide.show');
 Route::get('{tip_slug}.htm', 'TipController@display')->name('tips.display'); //user guide
 Route::get('{category_slug}/{tip_slug}.html', 'TipController@show')->name('tips.show'); //user guide
 
+Route::get('download', 'PagesController@download')->name('download'); //user guide
+
+Route::get('{category_slug}', 'TipCategoryController@show')->name('tipscategory.show'); //user guide
+
+
 Route::get('contact_us', 'ContactUsController@index')->name('contact.index'); //contact us
 Route::post('contact_us', 'ContactUsController@send')->name('contact.send'); //contact us
 

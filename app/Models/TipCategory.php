@@ -16,7 +16,7 @@ class TipCategory extends Model
 
   public function tip()
   {
-      return $this->hasMany(Tip::class);
+      return $this->hasMany(Tip::class,'category_id');
   }
 
 

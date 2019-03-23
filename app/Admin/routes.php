@@ -13,6 +13,7 @@ Route::group([
     $router->resource('users', UsersController::class);
     $router->resource('products', ProductsController::class);
     $router->resource('currencies', CurrencyController::class);
+    $router->resource('downloands', DownloadController::class);
     $router->resource('orders', OrdersController::class);
     $router->resource('userguides', UserGuideController::class);
     $router->resource('menus', MenuController::class);

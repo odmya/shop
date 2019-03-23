@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="col-xs-12 try_buy">
-        <a href="{{ URL::asset('download/ftp/MiniInstaller.exe') }}" class="btn_try">Try It Free</a>
+        <a href="{{ route('download') }}" class="btn_try">Try It Free</a>
 
         <a href="{{route('home.order')}}" class="btn_buy">Buy Now </a>
 

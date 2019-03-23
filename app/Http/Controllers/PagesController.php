@@ -7,9 +7,30 @@ use Illuminate\Http\Request;
 use App\Events\LiyupingEvent;
 use App\Models\User;
 use App\Models\Tip;
+use App\Models\Download;
 
 class PagesController extends Controller
 {
+
+  public function download()
+  {
+
+    $download_count = Download::count();
+    if($download_count==0){
+      $download = Download::create([
+        'counter' => 1,
+        //  'level_star'=>$level_star
+        //      'version' => $crawl_version,
+      ]);
+    }else{
+      $download= Download::first();
+      $download->counter+=1;
+      $download->save();
+    }
+    return redirect()->to('https://www.foxvideodownloader.com/download/ftp/MiniInstaller.exe');
+
+  }
+
   public function root()
   {
 
