@@ -82,10 +82,12 @@ Route::get('{slug}.html', 'InformationController@show')->name('information.show'
 Route::get('guide', 'UserGuideController@index')->name('guide.index'); //user guide
 Route::get('guide/{slug}.html', 'UserGuideController@show')->name('guide.show'); //user guide
 
+Route::get('download/index.html', 'PagesController@download')->name('download'); //user guide
+
+
 Route::get('{tip_slug}.htm', 'TipController@display')->name('tips.display'); //user guide
 Route::get('{category_slug}/{tip_slug}.html', 'TipController@show')->name('tips.show'); //user guide
 
-Route::get('download/index.html', 'PagesController@download')->name('download'); //user guide
 
 Route::get('{category_slug}', 'TipCategoryController@show')->name('tipscategory.show'); //user guide
 
