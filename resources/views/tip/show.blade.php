@@ -11,6 +11,13 @@
   <div class="col-sm-12 col-xs-12 ">
     <h1>{{$tip->title}}</h1>
   </div>
+
+  <div class="col-xs-12 try_buy">
+        <a href="http://www.shop.test/download/index.html" class="btn_try">Try It Free</a>
+
+        <a href="http://www.shop.test/order.html" class="btn_buy">Buy Now </a>
+
+  </div>
 </div>
 </div>
 

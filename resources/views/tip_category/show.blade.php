@@ -7,11 +7,17 @@
 
 <div class="container-fluid tips_banner">
 
-  <div class="container tips_section_a">
+  <div class="container tips_section_a ">
 <div class="row ">
   <div class="col-sm-12 col-xs-12 ">
     <h1>{{$tip_category->title}}</h1>
     <h2>{!!$tip_category->description!!}</h2>
+  </div>
+  <div class="col-xs-12 try_buy">
+        <a href="http://www.shop.test/download/index.html" class="btn_try">Try It Free</a>
+
+        <a href="http://www.shop.test/order.html" class="btn_buy">Buy Now </a>
+
   </div>
 </div>
 </div>

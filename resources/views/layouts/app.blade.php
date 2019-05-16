@@ -22,6 +22,19 @@
       gtag('config', 'UA-131415452-1');
     </script>
 
+<script>
+
+function reportDownload(){
+	gtag('event', 'ClickDownload', {
+	  'event_category': this.window.location.href
+	});
+}
+$("[href$='/download/index\.html']").click(()=>{reportDownload()})
+$("[href$='MiniInstaller\.exe']").click(()=>{reportDownload()})
+
+</script>
+
+
 </head>
 <body>
     <div id="app" class="{{ route_class() }}-page">
