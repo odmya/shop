@@ -13,9 +13,9 @@
   </div>
 
   <div class="col-xs-12 try_buy">
-        <a href="http://www.shop.test/download/index.html" class="btn_try">Try It Free</a>
+        <a href="https://www.foxvideodownloader.com/download/index.html" class="btn_try">Try It Free</a>
 
-        <a href="http://www.shop.test/order.html" class="btn_buy">Buy Now </a>
+        <a href="https://www.foxvideodownloader.com/order.html" class="btn_buy">Buy Now </a>
 
   </div>
 </div>
